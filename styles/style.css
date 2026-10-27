@@ -1,5 +1,8 @@
 
-/* ===== Global Styles ===== */
+/* ========================================
+   CAMPUS BITES
+   Shared CSS: Home + Order Pages
+======================================== */
 
 :root {
     --primary: #e76f35;
@@ -13,6 +16,8 @@
     --radius: 16px;
     --shadow: 0 8px 28px rgba(37, 42, 52, 0.07);
 }
+
+/* ===== Global Styles ===== */
 
 * {
     box-sizing: border-box;
@@ -42,7 +47,7 @@ h3 {
     line-height: 1.25;
 }
 
-/* ===== Header and Navigation ===== */
+/* ===== Shared Header and Navigation ===== */
 
 .site-header {
     display: flex;
@@ -86,7 +91,81 @@ nav a.active {
     color: var(--primary-dark);
 }
 
-/* ===== Homepage Hero Section ===== */
+/* ===== Shared Buttons ===== */
+
+.btn {
+    display: inline-block;
+    border: 2px solid var(--primary);
+    border-radius: 9px;
+    padding: 11px 20px;
+    background: var(--primary);
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-dark);
+}
+
+.btn-outline:hover {
+    color: white;
+}
+
+/* ===== Shared Sections and Cards ===== */
+
+.section {
+    padding: 65px 9%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.card h2,
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.icon {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.food-emoji {
+    display: block;
+    font-size: 3.2rem;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+/* ===== Homepage: Hero Section ===== */
 
 .hero {
     display: grid;
@@ -146,49 +225,7 @@ nav a.active {
     color: var(--muted);
 }
 
-.food-emoji {
-    display: block;
-    font-size: 3.2rem;
-    margin-bottom: 16px;
-    line-height: 1.4;
-}
-
-/* ===== Buttons ===== */
-
-.btn {
-    display: inline-block;
-    border: 2px solid var(--primary);
-    border-radius: 9px;
-    padding: 11px 20px;
-    background: var(--primary);
-    color: white;
-    font: inherit;
-    font-weight: 700;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-}
-
-.btn:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    background: transparent;
-    color: var(--primary-dark);
-}
-
-.btn-outline:hover {
-    color: white;
-}
-
-/* ===== Homepage Features ===== */
-
-.section {
-    padding: 65px 9%;
-}
+/* ===== Homepage: Feature Section ===== */
 
 .section-heading {
     text-align: center;
@@ -199,37 +236,7 @@ nav a.active {
     font-size: 2rem;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    margin-top: 28px;
-}
-
-.card {
-    padding: 28px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface);
-    box-shadow: var(--shadow);
-}
-
-.card h2,
-.card h3 {
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: var(--muted);
-}
-
-.icon {
-    display: inline-block;
-    font-size: 2rem;
-    margin-bottom: 14px;
-}
-
-/* ===== Call to Action ===== */
+/* ===== Homepage: Call to Action ===== */
 
 .cta {
     padding: 55px 9%;
@@ -247,7 +254,82 @@ nav a.active {
     margin-bottom: 22px;
 }
 
-/* ===== Footer ===== */
+/* ===== Order Page: Banner ===== */
+
+.page-banner {
+    padding: 65px 9%;
+    text-align: center;
+    background: linear-gradient(135deg, #fff0e5, #fffaf5);
+}
+
+.page-banner h1 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    margin-bottom: 12px;
+}
+
+.page-banner > p:last-child {
+    color: var(--muted);
+}
+
+/* ===== Order Page: Steps ===== */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.step-card {
+    position: relative;
+    padding: 30px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.step-number {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f5dfcf;
+}
+
+.step-card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.step-card a {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+/* ===== Order Page: Information Panel ===== */
+
+.info-panel {
+    margin: 0 9% 65px;
+    padding: 35px;
+    border-radius: var(--radius);
+    background: var(--soft);
+}
+
+.info-panel h2 {
+    margin-bottom: 15px;
+}
+
+.info-panel .btn {
+    margin-top: 20px;
+}
+
+/* ===== Shared Footer ===== */
 
 footer {
     padding: 25px 7%;
@@ -262,7 +344,11 @@ footer p + p {
     margin-top: 4px;
 }
 
-/* ===== Tablet Responsive Design ===== */
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* ===== Tablets ===== */
 
 @media (max-width: 900px) {
     .site-header {
@@ -288,9 +374,13 @@ footer p + p {
     .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* ===== Mobile Responsive Design ===== */
+/* ===== Mobile Phones ===== */
 
 @media (max-width: 600px) {
     .site-header {
@@ -328,6 +418,15 @@ footer p + p {
 
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    .page-banner {
+        padding: 48px 6%;
+    }
+
+    .info-panel {
+        margin: 0 6% 45px;
+        padding: 25px;
     }
 
     .cta {
