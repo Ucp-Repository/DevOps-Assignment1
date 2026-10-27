@@ -443,6 +443,110 @@ footer p + p {
     color: #c5cad2;
     margin-top: 4px;
 }
+/* ===== Deals Page ===== */
+
+.deals-section {
+    padding-top: 55px;
+    padding-bottom: 65px;
+}
+
+.deals-intro {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+    margin-top: 28px;
+}
+
+.deal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.deal-card h2,
+.deal-card h3 {
+    margin-bottom: 0;
+}
+
+.deal-card p {
+    color: var(--muted);
+}
+
+.deal-card .food-emoji {
+    margin: 8px 0;
+}
+
+.deal-card .price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.deal-card .old-price {
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.deal-card .btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.deal-label {
+    display: inline-block;
+    color: var(--primary-dark);
+    background: var(--soft);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.deal-card.featured {
+    border: 2px solid var(--primary);
+}
+
+/* Deals Page Responsive Styles */
+
+@media (max-width: 900px) {
+    .deals-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .deals-section {
+        padding-top: 40px;
+        padding-bottom: 45px;
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-card {
+        padding: 23px;
+    }
+}
 
 /* Tablet layout */
 @media (max-width: 900px) {
