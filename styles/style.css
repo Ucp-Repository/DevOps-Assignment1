@@ -1,8 +1,5 @@
 
-/* ========================================
-   CAMPUS BITES
-   Shared CSS: Home + Order Pages
-======================================== */
+/* Campus Bites - Shared Stylesheet */
 
 :root {
     --primary: #e76f35;
@@ -16,8 +13,6 @@
     --radius: 16px;
     --shadow: 0 8px 28px rgba(37, 42, 52, 0.07);
 }
-
-/* ===== Global Styles ===== */
 
 * {
     box-sizing: border-box;
@@ -40,14 +35,6 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
-h1,
-h2,
-h3 {
-    line-height: 1.25;
-}
-
-/* ===== Shared Header and Navigation ===== */
 
 .site-header {
     display: flex;
@@ -91,82 +78,6 @@ nav a.active {
     color: var(--primary-dark);
 }
 
-/* ===== Shared Buttons ===== */
-
-.btn {
-    display: inline-block;
-    border: 2px solid var(--primary);
-    border-radius: 9px;
-    padding: 11px 20px;
-    background: var(--primary);
-    color: white;
-    font: inherit;
-    font-weight: 700;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-}
-
-.btn:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    background: transparent;
-    color: var(--primary-dark);
-}
-
-.btn-outline:hover {
-    color: white;
-}
-
-/* ===== Shared Sections and Cards ===== */
-
-.section {
-    padding: 65px 9%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    margin-top: 28px;
-}
-
-.card {
-    padding: 28px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface);
-    box-shadow: var(--shadow);
-}
-
-.card h2,
-.card h3 {
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: var(--muted);
-}
-
-.icon {
-    display: inline-block;
-    font-size: 2rem;
-    margin-bottom: 14px;
-}
-
-.food-emoji {
-    display: block;
-    font-size: 3.2rem;
-    margin-bottom: 16px;
-    line-height: 1.4;
-}
-
-/* ===== Homepage: Hero Section ===== */
-
 .hero {
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;
@@ -186,6 +97,12 @@ nav a.active {
     font-weight: 800;
     letter-spacing: 2px;
     margin-bottom: 12px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
 }
 
 .hero h1 {
@@ -225,36 +142,105 @@ nav a.active {
     color: var(--muted);
 }
 
-/* ===== Homepage: Feature Section ===== */
+.food-emoji {
+    display: block;
+    font-size: 3.2rem;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.btn {
+    display: inline-block;
+    border: 2px solid var(--primary);
+    border-radius: 9px;
+    padding: 11px 20px;
+    background: var(--primary);
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-dark);
+}
+
+.btn-outline:hover {
+    color: white;
+}
+
+.section {
+    padding: 65px 9%;
+}
 
 .section-heading {
     text-align: center;
     margin-bottom: 32px;
 }
 
-.section-heading h2 {
+.section-heading h2,
+.section > h2 {
     font-size: 2rem;
 }
 
-/* ===== Homepage: Call to Action ===== */
-
-.cta {
-    padding: 55px 9%;
-    text-align: center;
-    background: var(--soft);
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 28px;
 }
 
-.cta h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+.card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
 }
 
-.cta p {
+.card h2,
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
     color: var(--muted);
-    margin-bottom: 22px;
 }
 
-/* ===== Order Page: Banner ===== */
+.icon {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.soft-section {
+    background: #fff2e7;
+}
+
+.category-title {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+
+.menu-card .price {
+    display: block;
+    margin-top: 18px;
+}
+
+.price {
+    color: var(--primary-dark);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
 
 .page-banner {
     padding: 65px 9%;
@@ -271,7 +257,39 @@ nav a.active {
     color: var(--muted);
 }
 
-/* ===== Order Page: Steps ===== */
+.deal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.deal-card .food-emoji {
+    margin: 8px 0;
+}
+
+.deal-card .btn {
+    margin-top: 8px;
+}
+
+.deal-label {
+    color: var(--primary-dark);
+    background: var(--soft);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.old-price {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+}
+
+.featured {
+    border: 2px solid var(--primary);
+}
 
 .steps {
     display: grid;
@@ -312,8 +330,6 @@ nav a.active {
     font-weight: 700;
 }
 
-/* ===== Order Page: Information Panel ===== */
-
 .info-panel {
     margin: 0 9% 65px;
     padding: 35px;
@@ -329,7 +345,91 @@ nav a.active {
     margin-top: 20px;
 }
 
-/* ===== Shared Footer ===== */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-info > p {
+    color: var(--muted);
+    margin: 16px 0 28px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.contact-item .icon {
+    margin: 0;
+}
+
+.contact-item h3 {
+    font-size: 1.05rem;
+}
+
+.contact-item p {
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.feedback-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.feedback-card label {
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.feedback-card input,
+.feedback-card select,
+.feedback-card textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dfd5cb;
+    border-radius: 8px;
+    background: white;
+    color: var(--dark);
+    font: inherit;
+}
+
+.feedback-card input:focus,
+.feedback-card select:focus,
+.feedback-card textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.feedback-card textarea {
+    resize: vertical;
+}
+
+.feedback-card button {
+    margin-top: 12px;
+}
+
+.cta {
+    padding: 55px 9%;
+    text-align: center;
+    background: var(--soft);
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    color: var(--muted);
+    margin-bottom: 22px;
+}
 
 footer {
     padding: 25px 7%;
@@ -344,12 +444,7 @@ footer p + p {
     margin-top: 4px;
 }
 
-/* ========================================
-   RESPONSIVE DESIGN
-======================================== */
-
-/* ===== Tablets ===== */
-
+/* Tablet layout */
 @media (max-width: 900px) {
     .site-header {
         flex-direction: column;
@@ -375,13 +470,12 @@ footer p + p {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .steps {
+    .contact-layout {
         grid-template-columns: 1fr;
     }
 }
 
-/* ===== Mobile Phones ===== */
-
+/* Mobile layout */
 @media (max-width: 600px) {
     .site-header {
         padding: 18px 5%;
@@ -416,7 +510,8 @@ footer p + p {
         padding: 45px 6%;
     }
 
-    .grid {
+    .grid,
+    .steps {
         grid-template-columns: 1fr;
     }
 
